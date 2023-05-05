@@ -1,0 +1,7 @@
+.contenedor-plataformas{
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+}
