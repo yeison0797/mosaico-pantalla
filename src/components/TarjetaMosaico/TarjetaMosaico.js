@@ -4,12 +4,14 @@ import "./TarjetaMosaico.css";
 
 
 
-function TarjetaMosaico(estilo){
-    console.log(estilo.estilo)
-	return(
-		<div  className="contenedor-tarjeta" style={estilo.estilo}>
-			<h>Planta física</h>
+function TarjetaMosaico(props) {
+	console.log(props.estilo)
+	return (
+
+		<div className="contenedor-tarjeta" style={{ backgroundImage: "url('https://github.com/yeison0797/mosaico-pantalla/blob/main/public/recursos.jpeg')" }}>
+			<h1>Planta física</h1>
 		</div>
+
 	);
 }
 
