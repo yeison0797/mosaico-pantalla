@@ -9,7 +9,7 @@ function TarjetaMosaico(props) {
 	return (
 		<div className="contenedor-tarjeta">
 			<img src={props.estilo} alt="" />
-			<h1>Planta física</h1>
+			<p>PLANTA FÍSICA</p>
 		</div>
 	);
 }
