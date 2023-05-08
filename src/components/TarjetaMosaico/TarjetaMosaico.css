@@ -1,9 +1,7 @@
 .contenedor-tarjeta {
     position: relative;
     width: 100%;
-    background: rgba(83, 183, 123, 0.29);
-
-    mix-blend-mode: multiply
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .contenedor-tarjeta>img {
@@ -15,5 +13,4 @@
     top: 0;
     left: 0;
     z-index: -1;
-
 }

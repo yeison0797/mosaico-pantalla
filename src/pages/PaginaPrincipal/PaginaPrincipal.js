@@ -15,6 +15,8 @@ function PaginaPrincipal() {
 
     return (
         <div className="principal">
+            <img className="logo-img" src="logo.png" alt="" />
+            <img className="escudo-img" src="Escudo.png" alt="" />
             <div className="contenedor-plataformas" >
                 <TarjetaMosaico estilo={miEstilo1} />
                 <TarjetaMosaico estilo={miEstilo2} />
