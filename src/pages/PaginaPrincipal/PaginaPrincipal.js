@@ -3,15 +3,15 @@ import { TarjetaMosaico } from "../../components/TarjetaMosaico";
 
 function PaginaPrincipal() {
 
-    const miEstilo1 = {
-        backgroundImage: '../../../public/Aseo.jpeg'
-    };
-    const miEstilo2 = {
-        backgroundColor: 'yellow'
-    };
-    const miEstilo3 = {
-        backgroundColor: 'green'
-    };
+    const miEstilo1 = (
+        "Aseo.jpeg"
+    );
+    const miEstilo2 = (
+        "recursos.jpeg"
+    );
+    const miEstilo3 = (
+        "planta.jpeg"
+    );
 
     return (
         <div className="principal">
@@ -19,7 +19,6 @@ function PaginaPrincipal() {
                 <TarjetaMosaico estilo={miEstilo1} />
                 <TarjetaMosaico estilo={miEstilo2} />
                 <TarjetaMosaico estilo={miEstilo3} />
-
             </div>
             <div className="mintic">Copyright 2023 | Vigilado MINEDUCACIÓN Y MINJUSTICIA</div>
         </div>
