@@ -2,11 +2,12 @@
     position: relative;
     width: 100%;
     color: white;
-    background-color: rgba(0, 0, 0, 0.542);
+    /* background-color: rgba(0, 0, 0, 0.542); */
     color: rgba(240, 248, 255, 0.52);
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .contenedor-tarjeta:hover {
@@ -17,7 +18,8 @@
 
 p {
     transform: rotate(-90.1deg);
-    font-size: 9em;
+    font-size: 4.2vw;
+    
     font-weight: bold;
     white-space: nowrap;
     position: absolute;
@@ -33,3 +35,5 @@ p {
     left: 0;
     z-index: -1;
 }
+
+
