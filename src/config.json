@@ -1,0 +1,4 @@
+{
+    "ApiInventario": "http://localhost:3001/api/gateway/v1",
+    "WebApp": "http://localhost:3000"
+}
