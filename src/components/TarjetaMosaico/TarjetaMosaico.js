@@ -1,10 +1,10 @@
 
 import React, { useState } from 'react';
+import { axiosBasicInstanceApiInventario } from "../../helpers/axiosInstances";
 
 import "./TarjetaMosaico.css";
 
 function TarjetaMosaico(props) {
-	console.log(props.estilo)
 	const { atributo1, backgroundColor, atributo3, hoverBackgroundColor } = props;
 
 	const [containerStyles, setContainerStyles] = useState({
@@ -28,8 +28,9 @@ function TarjetaMosaico(props) {
 
 	return (
 		<div className="contenedor-tarjeta" style={containerStyles}
-			onMouseEnter={handleMouseEnter}
-			onMouseLeave={handleMouseLeave}>
+		// onMouseEnter={handleMouseEnter}
+		// onMouseLeave={handleMouseLeave}
+		>
 			<img src={atributo3} alt="" />
 			<p>{atributo1}</p>
 		</div>

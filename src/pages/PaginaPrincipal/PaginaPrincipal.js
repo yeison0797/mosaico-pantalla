@@ -2,10 +2,13 @@ import "./PaginaPrincipal.css";
 import { TarjetaMosaico } from "../../components/TarjetaMosaico";
 import { axiosBasicInstanceApiInventario } from "../../helpers/axiosInstances";
 import { useEffect, useState } from "react";
+import config from '../../config.json'
+
 
 function PaginaPrincipal() {
 
     const [dependencias, setDependencias] = useState([""])
+    const [miVariable, setMiVariable] = useState('');
 
     useEffect(() => {
         axiosBasicInstanceApiInventario({
@@ -13,14 +16,28 @@ function PaginaPrincipal() {
             url: "/dependencias",
         })
             .then((result) => {
-                console.log(result.data.results);
+                // console.log(result.data.results);
                 setDependencias(result.data.results);
+                recuperarDelCache();
 
             })
             .catch((err) => {
                 console.log("error");
             });
     }, []);
+
+
+    // Guardar la variable en el estado local
+    // function guardarEnCache(valor) {
+    //     localStorage.setItem('miVariable', "valor");
+    //     recuperarDelCache();
+    // }
+
+    // Recuperar la variable del estado local
+    function recuperarDelCache() {
+        const valor = localStorage.getItem('miVariable');
+        console.log(valor);
+    }
 
     return (
         <div className="principal">
@@ -30,7 +47,7 @@ function PaginaPrincipal() {
                 {dependencias.map(datos => {
                     return (
                         <>
-                            <TarjetaMosaico atributo1={datos["nombre"]} atributo3="Aseo.jpeg" backgroundColor='rgba(0, 0, 0, 0.542)' hoverBackgroundColor={datos["color"]} />
+                            {/* <TarjetaMosaico atributo1={datos["nombre"]} atributo3={config.ApiInventario + "/fotos/" + datos["id"]} backgroundColor='rgba(0, 0, 0, 0.542)' hoverBackgroundColor={datos["color"]} id={datos["id"]} /> */}
                         </>
                     )
                 })}
