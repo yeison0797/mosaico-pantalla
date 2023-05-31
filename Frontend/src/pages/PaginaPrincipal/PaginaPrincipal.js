@@ -48,6 +48,9 @@ function PaginaPrincipal() {
                     return (
                         <>
                             {/* <TarjetaMosaico atributo1={datos["nombre"]} atributo3={config.ApiInventario + "/fotos/" + datos["id"]} backgroundColor='rgba(0, 0, 0, 0.542)' hoverBackgroundColor={datos["color"]} id={datos["id"]} /> */}
+                            <TarjetaMosaico atributo3="Aseo.jpeg" atributo1="Aseo y Mantenimiento"/>
+                            <TarjetaMosaico atributo3="planta.jpeg" atributo1="Aseo y Mantenimiento"/>
+                            <TarjetaMosaico atributo3="recursos.jpeg" atributo1="Aseo y Mantenimiento"/>
                         </>
                     )
                 })}

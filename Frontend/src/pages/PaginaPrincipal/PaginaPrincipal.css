@@ -43,3 +43,20 @@
     padding: 1em;
     width: 4.5em;
 }
+
+@media (max-width: 500px) {
+    .principal {
+      display: flex;
+      flex-direction: column;
+
+    }
+  
+    .contenedor-plataformas {
+        display: flex;
+      flex-direction: column;
+    }
+
+    .contenedor-tarjeta{
+        position: initial;
+    }
+  }
