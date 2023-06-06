@@ -18,7 +18,6 @@ function PaginaPrincipal() {
             .then((result) => {
                 // console.log(result.data.results);
                 setDependencias(result.data.results);
-                recuperarDelCache();
 
             })
             .catch((err) => {
@@ -26,18 +25,6 @@ function PaginaPrincipal() {
             });
     }, []);
 
-
-    // Guardar la variable en el estado local
-    // function guardarEnCache(valor) {
-    //     localStorage.setItem('miVariable', "valor");
-    //     recuperarDelCache();
-    // }
-
-    // Recuperar la variable del estado local
-    function recuperarDelCache() {
-        const valor = localStorage.getItem('miVariable');
-        console.log(valor);
-    }
 
     return (
         <div className="principal">
@@ -47,10 +34,11 @@ function PaginaPrincipal() {
                 {dependencias.map(datos => {
                     return (
                         <>
-                            {/* <TarjetaMosaico atributo1={datos["nombre"]} atributo3={config.ApiInventario + "/fotos/" + datos["id"]} backgroundColor='rgba(0, 0, 0, 0.542)' hoverBackgroundColor={datos["color"]} id={datos["id"]} /> */}
-                            <TarjetaMosaico atributo3="Aseo.jpeg" atributo1="Aseo y Mantenimiento"/>
+                            <TarjetaMosaico atributo1={datos["nombre"]} atributo3={config.ApiInventario + "/dependencias/fotos/" + datos["id"]} backgroundColor='rgba(0, 0, 0, 0.542)' hoverBackgroundColor={datos["color"]} id={datos["id"]} />
+                            {/* <TarjetaMosaico atributo3="Aseo.jpeg" atributo1="Aseo y Mantenimiento"/>
                             <TarjetaMosaico atributo3="planta.jpeg" atributo1="Aseo y Mantenimiento"/>
                             <TarjetaMosaico atributo3="recursos.jpeg" atributo1="Aseo y Mantenimiento"/>
+                        */}
                         </>
                     )
                 })}
