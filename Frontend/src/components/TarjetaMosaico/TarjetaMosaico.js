@@ -27,9 +27,11 @@ function TarjetaMosaico(props) {
 	};
 
 	return (
-		<div className="contenedor-tarjeta" style={containerStyles}
+		<div className="contenedor-tarjeta"
+			style={containerStyles}
 			onMouseEnter={handleMouseEnter}
 			onMouseLeave={handleMouseLeave}
+			onClick={() => window.location.href = "https://vauless.ugc.edu.co/" + atributo1}
 		>
 			<img src={atributo3} alt="" />
 			<p>{atributo1}</p>
@@ -37,4 +39,4 @@ function TarjetaMosaico(props) {
 	);
 }
 
-export default TarjetaMosaico;
+export default TarjetaMosaico
