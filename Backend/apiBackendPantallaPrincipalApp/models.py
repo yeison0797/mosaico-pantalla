@@ -6,6 +6,7 @@ class Dependencia(models.Model):
     imagen = models.ImageField(upload_to="imagenes",blank=False,null=False)
     color = models.CharField(max_length=15, blank=True, null=True)
     nombre= models.CharField(max_length=50,blank=False, null=False,unique=True)  
+    url= models.CharField(max_length=15,blank=True, null=True)  
     class Meta:
         verbose_name = ("Dependencia")
         verbose_name_plural = ("dependencias")
