@@ -5,7 +5,7 @@ import { axiosBasicInstanceApiInventario } from "../../helpers/axiosInstances";
 import "./TarjetaMosaico.css";
 
 function TarjetaMosaico(props) {
-	const { atributo1, backgroundColor, atributo3, hoverBackgroundColor } = props;
+	const { atributo1, backgroundColor, atributo3, hoverBackgroundColor, url } = props;
 
 	const [containerStyles, setContainerStyles] = useState({
 		backgroundColor: backgroundColor,
@@ -31,7 +31,7 @@ function TarjetaMosaico(props) {
 			style={containerStyles}
 			onMouseEnter={handleMouseEnter}
 			onMouseLeave={handleMouseLeave}
-			onClick={() => window.location.href = "https://vauless.ugc.edu.co/" + atributo1}
+			onClick={() => window.location.href = "https://vauless.ugc.edu.co/" + url}
 		>
 			<img src={atributo3} alt="" />
 			<p>{atributo1}</p>

@@ -36,14 +36,14 @@ function PaginaPrincipal() {
             <div className="contenedor-plataformas" >
                 {dependencias.map(datos => {
                     return (
-
                         <TarjetaMosaico
                             key={datos.id}
                             atributo1={datos["nombre"]}
                             atributo3={config.ApiInventario + "/dependencias/fotos/" + datos.id}
                             backgroundColor='rgba(0, 0, 0, 0.542)'
                             hoverBackgroundColor={datos["color"]}
-                            id={datos["id"]} />
+                            id={datos["id"]}
+                            url={datos["url"]} />
 
                     )
                 })}
