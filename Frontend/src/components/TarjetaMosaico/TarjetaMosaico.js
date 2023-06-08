@@ -28,8 +28,8 @@ function TarjetaMosaico(props) {
 
 	return (
 		<div className="contenedor-tarjeta" style={containerStyles}
-		// onMouseEnter={handleMouseEnter}
-		// onMouseLeave={handleMouseLeave}
+			onMouseEnter={handleMouseEnter}
+			onMouseLeave={handleMouseLeave}
 		>
 			<img src={atributo3} alt="" />
 			<p>{atributo1}</p>

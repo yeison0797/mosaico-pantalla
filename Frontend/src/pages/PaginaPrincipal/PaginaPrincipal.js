@@ -1,3 +1,4 @@
+import React from "react";
 import "./PaginaPrincipal.css";
 import { TarjetaMosaico } from "../../components/TarjetaMosaico";
 import { axiosBasicInstanceApiInventario } from "../../helpers/axiosInstances";
@@ -7,8 +8,9 @@ import config from '../../config.json'
 
 function PaginaPrincipal() {
 
-    const [dependencias, setDependencias] = useState([""])
-    const [miVariable, setMiVariable] = useState('');
+    const [dependencias, setDependencias] = useState([])
+    const [id, setId] = useState('');
+
 
     useEffect(() => {
         axiosBasicInstanceApiInventario({
@@ -18,6 +20,7 @@ function PaginaPrincipal() {
             .then((result) => {
                 // console.log(result.data.results);
                 setDependencias(result.data.results);
+
 
             })
             .catch((err) => {
@@ -33,13 +36,15 @@ function PaginaPrincipal() {
             <div className="contenedor-plataformas" >
                 {dependencias.map(datos => {
                     return (
-                        <>
-                            <TarjetaMosaico atributo1={datos["nombre"]} atributo3={config.ApiInventario + "/dependencias/fotos/" + datos["id"]} backgroundColor='rgba(0, 0, 0, 0.542)' hoverBackgroundColor={datos["color"]} id={datos["id"]} />
-                            {/* <TarjetaMosaico atributo3="Aseo.jpeg" atributo1="Aseo y Mantenimiento"/>
-                            <TarjetaMosaico atributo3="planta.jpeg" atributo1="Aseo y Mantenimiento"/>
-                            <TarjetaMosaico atributo3="recursos.jpeg" atributo1="Aseo y Mantenimiento"/>
-                        */}
-                        </>
+
+                        <TarjetaMosaico
+                            key={datos.id}
+                            atributo1={datos["nombre"]}
+                            atributo3={config.ApiInventario + "/dependencias/fotos/" + datos.id}
+                            backgroundColor='rgba(0, 0, 0, 0.542)'
+                            hoverBackgroundColor={datos["color"]}
+                            id={datos["id"]} />
+
                     )
                 })}
             </div>
