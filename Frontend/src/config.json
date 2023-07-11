@@ -1,4 +1,4 @@
 {
-    "ApiInventario": "http://localhost:8000/api/pantallaprincipal/v1",
-    "WebApp": "http://localhost:3000"
+    "ApiInventario": "/api/pantallaprincipal/v1",
+    "WebApp": "http://webAppPPrincipal/"
 }

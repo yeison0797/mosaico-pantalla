@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { axiosBasicInstanceApiInventario } from "../../helpers/axiosInstances";
-
+import config from '../../config.json'
 import "./TarjetaMosaico.css";
 
 function TarjetaMosaico(props) {
@@ -31,7 +31,7 @@ function TarjetaMosaico(props) {
 			style={containerStyles}
 			onMouseEnter={handleMouseEnter}
 			onMouseLeave={handleMouseLeave}
-			onClick={() => window.location.href = "https://vauless.ugc.edu.co/" + url}
+			onClick={() => window.location.href = "/"+ url}
 		>
 			<img src={atributo3} alt="" />
 			<p>{atributo1}</p>
